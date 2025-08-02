@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIVAKUMAR ❤️ RAJAPNISHA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans Tamil', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 30px 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .hearts {
+      font-size: 2rem;
+      animation: float 2s infinite alternate;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    section {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .message {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    .animate-heart {
+      animation: pulse 1.2s ease-in-out infinite;
+      color: red;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+
+    .love-btn {
+      margin-top: 20px;
+      background-color: #fff;
+      color: #e91e63;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .love-btn:hover {
+      background-color: #e91e63;
+      color: white;
+    }
+
+    /* Slideshow */
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: 20px auto;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .slide-img {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+
+    .slide-img.active {
+      display: block;
+    }
+
+    /* Printable Letter */
+    #loveLetter {
+      display: none;
+      background-color: white;
+      color: black;
+      padding: 20px;
+      text-align: left;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #loveLetter, #loveLetter * {
+        visibility: visible;
+      }
+      #loveLetter {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    /* Floating Hearts */
+    .floating-hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 24px;
+      animation: floatHearts 8s linear infinite;
+    }
+
+    @keyframes floatHearts {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    உங்கள் உலாவி ஆடியோவுக்கு ஆதரிக்கவில்லை.
+  </audio>
+
+  <!-- Floating hearts -->
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- Header -->
+  <header>
+    ❤️🤍<br>
+    SIVAKUMAR & RAJAPNISHA<br>
+    ❤️🤍
+  </header>
+
+ <!-- Slideshow with Anime Couple Images -->
+<div class="slideshow-container">
+  <img class="slide-img active" src="https://i.pinimg.com/originals/e6/89/48/e6894871bb7c71f1b5d7a7ef2b319c97.jpg" alt="Anime Love 1">
+  <img class="slide-img" src="https://i.pinimg.com/originals/56/d7/0c/56d70cc5be7155e165f47f2d9e40a9bb.jpg" alt="Anime Love 2">
+  <img class="slide-img" src="https://i.pinimg.com/originals/cf/e9/c4/cfe9c4a6c4e1c23ea4706a303e25863e.jpg" alt="Anime Love 3">
+</div>
+
+
+  <!-- Message Section -->
+  <section>
+    <div class="message">
+      <p>இன்று ஒரு இனிய நாள்…</p>
+      <p>எங்கள் வாழ்க்கையின் சிறந்த நினைவுகள் ஒன்று சேர்ந்த நாள்…</p>
+      <p>காதல் நிறைந்த என் அன்பு வாழ்க்கைதங்கையே,</p>
+      <p>திருமண நாள் வாழ்த்துக்கள்! 💖</p>
+      <p class="hearts animate-heart">💞💞💞</p>
+    </div>
+
+    <button class="love-btn" onclick="showSurprise()">சிறப்பான மெசேஜ் 👇</button>
+    <p id="surpriseMessage" style="margin-top: 20px; font-weight: bold;"></p>
+
+    <button class="love-btn" onclick="printLoveLetter()">🖨️ காதல் கடிதம்</button>
+
+    <div id="loveLetter">
+      <h2>அன்பான ராஜப்னிஷாவுக்கு,</h2>
+      <p>நீ என் வாழ்க்கையின் ஒளி. உன்னுடன் வாழ்ந்த ஒவ்வொரு நொடியும் என் இதயத்தில் என்றும் பதிந்து இருக்கும்.</p>
+      <p>நீ இல்லாத ஒரு நாள் கூட சாத்தியமில்லை. என் வாழ்வின் சுவாசம் நீயே. இந்த நாளில் உன்னை நினைத்து எழுதிய கடிதம் இது.</p>
+      <p>இனிய திருமண நாள் நல்வாழ்த்துகள்!</p>
+      <p>என்றும் உன்னையே நேசிக்கும்,</p>
+      <p>சிவகுமார் ❤️</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 SIVAKUMAR ❤️ RAJAPNISHA. எல்லாம் காதலுக்காக.
+  </div>
+
+  <!-- Script -->
+  <script>
+    function showSurprise() {
+      const msg = "நீ எனக்கு கடவுள் கொடுத்த வரம்! என் உயிரின் உயிராய் என்றும் நீயே இருப்பாய்!";
+      document.getElementById("surpriseMessage").textContent = msg;
+    }
+
+    function printLoveLetter() {
+      const letter = document.getElementById('loveLetter');
+      letter.style.display = 'block';
+      window.print();
+      letter.style.display = 'none';
+    }
+
+    // Slideshow
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide-img");
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].classList.add("active");
+      setTimeout(showSlides, 3000);
+    }
+    showSlides();
+
+    // Floating hearts
+    const heartsContainer = document.getElementById('floatingHearts');
+    const heartSymbols = ["❤️", "🤍"];
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.textContent = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 20 + "px";
+      heart.style.animationDuration = 5 + Math.random() * 5 + "s";
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 10000);
+    }, 300);
+  </script>
+
+</body>
+</html>
