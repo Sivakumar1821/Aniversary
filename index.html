@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SIVAKUMAR ❤️ RAJAPNISHA</title>
+  <title>SIVAKUMAR❤️🤍RAJAPNISHA</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil&display=swap" rel="stylesheet">
   <style>
     * {
@@ -16,7 +16,6 @@
     body {
       background: linear-gradient(to right, #ffdde1, #ee9ca7);
       color: #fff;
-      text-align: center;
       padding: 20px;
       overflow-x: hidden;
     }
@@ -25,10 +24,11 @@
       padding: 30px 0;
       font-size: 2.5rem;
       font-weight: bold;
+      text-align: center;
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(5px);
       border-radius: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     .hearts {
@@ -41,25 +41,77 @@
       100% { transform: translateY(-10px); }
     }
 
+    .content-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .slideshow-container,
     section {
-      max-width: 700px;
-      margin: 0 auto;
-      background-color: rgba(255, 255, 255, 0.15);
-      padding: 30px;
-      border-radius: 20px;
+      width: 500px;
+      height: 500px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slideshow-container {
+      padding: 10px;
+    }
+
+    .slide-img {
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .slide-img.active {
+      display: block;
+    }
+
+    section {
+      padding: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      position: relative;
+      text-align: center;
     }
 
     .message {
-      font-size: 1.5rem;
-      line-height: 2.2rem;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+    }
+
+    .love-btn {
+      margin-top: 15px;
+      background-color: #fff;
+      color: #e91e63;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .love-btn:hover {
+      background-color: #e91e63;
+      color: white;
     }
 
     .footer {
-      margin-top: 30px;
+      margin-top: 40px;
       font-size: 1rem;
+      text-align: center;
       opacity: 0.8;
+      color: #fff;
     }
 
     .animate-heart {
@@ -73,43 +125,6 @@
       100% { transform: scale(1); }
     }
 
-    .love-btn {
-      margin-top: 20px;
-      background-color: #fff;
-      color: #e91e63;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .love-btn:hover {
-      background-color: #e91e63;
-      color: white;
-    }
-
-    /* Slideshow */
-    .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: 20px auto;
-      border-radius: 15px;
-      overflow: hidden;
-    }
-
-    .slide-img {
-      display: none;
-      width: 100%;
-      height: auto;
-    }
-
-    .slide-img.active {
-      display: block;
-    }
-
-    /* Printable Letter */
     #loveLetter {
       display: none;
       background-color: white;
@@ -118,6 +133,7 @@
       text-align: left;
       border-radius: 10px;
       margin-top: 20px;
+      width: 100%;
     }
 
     @media print {
@@ -134,7 +150,6 @@
       }
     }
 
-    /* Floating Hearts */
     .floating-hearts {
       position: fixed;
       top: 0;
@@ -162,6 +177,14 @@
         opacity: 0;
       }
     }
+
+    @media (max-width: 600px) {
+      .slideshow-container,
+      section {
+        width: 100%;
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -182,38 +205,40 @@
     ❤️🤍
   </header>
 
-  <!-- Slideshow with Working Couple Images -->
-  <div class="slideshow-container" id="slideshow">
-    <img class="slide-img active" src="https://i.pinimg.com/originals/20/61/94/206194dbc1c8e681b9eb9800b0dd4122.jpg" alt="Couple 1">
-    <img class="slide-img" src="https://i.pinimg.com/originals/8a/b1/f2/8ab1f28a58cfaa57620372d5cd53ae93.jpg" alt="Couple 2">
-    <img class="slide-img" src="https://i.pinimg.com/originals/b3/f5/9f/b3f59fd7ff4dc3827f30d52bd4522b7e.jpg" alt="Couple 3">
-    <img class="slide-img" src="https://i.pinimg.com/originals/af/7f/47/af7f4704e91f3ffedcb2458e77d3794e.jpg" alt="Couple 4">
+  <!-- Main Content -->
+  <div class="content-wrapper">
+    <!-- Slideshow -->
+    <div class="slideshow-container" id="slideshow">
+      <img class="slide-img active" src="https://images.wallpaperscraft.com/image/single/couple_silhouettes_moon_118832_1920x1080.jpg" alt="Couple 1">
+      <img class="slide-img" src="https://wallpapercrafter.com/desktop1/520557-romantic-love-beach-couple-hd-photos-1080P.jpg" alt="Couple 2">
+      <img class="slide-img" src="https://c4.wallpaperflare.com/wallpaper/614/300/840/sunset-romantic-couple-love-wallpaper-hd-wallpaper-preview.jpg" alt="Couple 3">
+    </div>
+
+    <!-- Message Section -->
+    <section>
+      <div class="message">
+        <p>இன்று ஒரு இனிய நாள்…</p>
+        <p>எங்கள் வாழ்க்கையின் சிறந்த நினைவுகள் ஒன்று சேர்ந்த நாள்…</p>
+        <p>காதல் நிறைந்த என் அன்பு வாழ்க்கைதங்கையே,</p>
+        <p>திருமண நாள் வாழ்த்துக்கள்! 💖</p>
+        <p class="hearts animate-heart">💞💞💞</p>
+      </div>
+
+      <button class="love-btn" onclick="showSurprise()">சிறப்பான மெசேஜ் 👇</button>
+      <p id="surpriseMessage" style="margin-top: 20px; font-weight: bold;"></p>
+
+      <button class="love-btn" onclick="printLoveLetter()">🖨️ காதல் கடிதம்</button>
+
+      <div id="loveLetter">
+        <h2>அன்பான ராஜப்னிஷாவுக்கு,</h2>
+        <p>நீ என் வாழ்க்கையின் ஒளி. உன்னுடன் வாழ்ந்த ஒவ்வொரு நொடியும் என் இதயத்தில் என்றும் பதிந்து இருக்கும்.</p>
+        <p>நீ இல்லாத ஒரு நாள் கூட சாத்தியமில்லை. என் வாழ்வின் சுவாசம் நீயே. இந்த நாளில் உன்னை நினைத்து எழுதிய கடிதம் இது.</p>
+        <p>இனிய திருமண நாள் நல்வாழ்த்துகள்!</p>
+        <p>என்றும் உன்னையே நேசிக்கும்,</p>
+        <p>சிவகுமார் ❤️</p>
+      </div>
+    </section>
   </div>
-
-  <!-- Message Section -->
-  <section>
-    <div class="message">
-      <p>இன்று ஒரு இனிய நாள்…</p>
-      <p>எங்கள் வாழ்க்கையின் சிறந்த நினைவுகள் ஒன்று சேர்ந்த நாள்…</p>
-      <p>காதல் நிறைந்த என் அன்பு வாழ்க்கைதங்கையே,</p>
-      <p>திருமண நாள் வாழ்த்துக்கள்! 💖</p>
-      <p class="hearts animate-heart">💞💞💞</p>
-    </div>
-
-    <button class="love-btn" onclick="showSurprise()">சிறப்பான மெசேஜ் 👇</button>
-    <p id="surpriseMessage" style="margin-top: 20px; font-weight: bold;"></p>
-
-    <button class="love-btn" onclick="printLoveLetter()">🖨️ காதல் கடிதம்</button>
-
-    <div id="loveLetter">
-      <h2>அன்பான ராஜப்னிஷாவுக்கு,</h2>
-      <p>நீ என் வாழ்க்கையின் ஒளி. உன்னுடன் வாழ்ந்த ஒவ்வொரு நொடியும் என் இதயத்தில் என்றும் பதிந்து இருக்கும்.</p>
-      <p>நீ இல்லாத ஒரு நாள் கூட சாத்தியமில்லை. என் வாழ்வின் சுவாசம் நீயே. இந்த நாளில் உன்னை நினைத்து எழுதிய கடிதம் இது.</p>
-      <p>இனிய திருமண நாள் நல்வாழ்த்துகள்!</p>
-      <p>என்றும் உன்னையே நேசிக்கும்,</p>
-      <p>சிவகுமார் ❤️</p>
-    </div>
-  </section>
 
   <!-- Footer -->
   <div class="footer">
@@ -262,6 +287,5 @@
       setTimeout(() => heart.remove(), 10000);
     }, 300);
   </script>
-
 </body>
 </html>
